@@ -31,7 +31,8 @@ promoCode
 **INSTRUCTIONS**
 
 > Go to the amaysim-demo Folder
-> open CMD run npm start
+> open CMD run npm install
+> run npm start
 > go to postman or curl on CMD the endpoint of
 POST - localhost:3000/api/cart/:promoCode
 > Read carefully the IMPORTANT notice above
