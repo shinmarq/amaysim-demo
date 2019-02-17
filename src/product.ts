@@ -75,7 +75,7 @@ export class Product {
     /**Items added */
     this.myCart.itemsAdded = `${data.item1.qty} x ${data.item1.item} ${
       data.item2.qty
-    } x ${data.item2.item}`;
+    } x ${data.item2.item} ${promoCode === this.promoCode ? " I<3AMAYSIM Promo applied" : ""}`;
 
     /**Items on current Shopping Cart */
     this.myCart.items = `${data.item1.qty} x ${data.item1.item} & ${
