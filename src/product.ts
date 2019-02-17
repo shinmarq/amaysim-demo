@@ -104,12 +104,6 @@ export class Product {
   }
 
   validateItems(body: any) {
-    let found1 = this.products.some((items: any) => {
-      return body.item1["item"] === items.name;
-    });
-    let found2 = this.products.some((items: any) => {
-      return body.item2["item"] === items.name;
-    });
     if (!body["item1"]) throw new Error("Missing parameter, item1 is required");
     if (!body["item2"]) throw new Error("Missing parameter, item2 is required");
     if (!body.item1["item"])
@@ -120,6 +114,14 @@ export class Product {
       throw new Error("Missing parameter, qty in item1 is required");
     if (!body.item2["qty"])
       throw new Error("Missing parameter, qty in item2 is required");
+
+    let found1 = this.products.some((items: any) => {
+      return body.item1["item"] === items.name;
+    });
+    let found2 = this.products.some((items: any) => {
+      return body.item2["item"] === items.name;
+    });
+
     if (!found1) throw new Error("item1 does not exist, Please try again");
     if (!found2) throw new Error("item2 does not exist, Please try again");
   }
