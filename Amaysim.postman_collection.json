@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "e348424f-fe30-4424-95f4-3a1d15bc44f2",
+		"name": "Amaysim",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - Shopping Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"item1\": {\"item\":\"Unlimited 5GB\",\"qty\": 2},\"item2\":{\"item\":\"Unlimited 1GB\",\"qty\": 2}}"
+				},
+				"url": {
+					"raw": "{{localhost}}api/cart/",
+					"host": [
+						"{{localhost}}api"
+					],
+					"path": [
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}",
+					"host": [
+						"{{localhost}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
